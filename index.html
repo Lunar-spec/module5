@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
+        integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <title>Student Registration System</title>
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+</head>
+
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>A system for registering student details, editing records, and more.</p>
+    </header>
+
+    <article class="content">
+        <img
+            src="/assets/system.png"
+            alt="System"
+            width="500"
+            height="500"
+            class="systemImg"
+        >
+        <section class="registrationForm">
+            <h2>Register Student</h2>
+            <form id="studentForm">
+                <div class="formSection">
+                    <label for="studentPhoto">Photo:</label>
+                    <!-- Custom file input -->
+                    <input
+                        type="file"
+                        name="studentPhoto"
+                        accept=".jpg, .jpeg, .png"
+                        id="studentPhoto"
+                        style="display: none;"
+                    >
+                    <div
+                        id="uploadIcon"
+                        class="uploadPlaceholder"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            stroke="#fff"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="css-i6dzq1"
+                        >
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line
+                                x1="12"
+                                y1="3"
+                                x2="12"
+                                y2="15"
+                            ></line>
+                        </svg>
+                        <span id="fileName">No file chosen</span>
+                    </div>
+                </div>
+                <div class="formSection">
+                    <label for="studentName">Name:</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        name="studentName"
+                        required
+                    >
+                </div>
+                <div class="formSection">
+                    <label for="studentID">StdID:</label>
+                    <input
+                        type="text"
+                        id="studentID"
+                        name="studentID"
+                        required
+                    >
+                </div>
+                <div class="formSection">
+                    <label for="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </div>
+                <div class="formSection">
+                    <label for="contactNo">Contact:</label>
+                    <input
+                        type="tel"
+                        id="contactNo"
+                        name="contactNo"
+                        minlength="10"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section class="studentRecords">
+            <h2>Student Records</h2>
+            <div id="recordsContainer">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Email ID</th>
+                            <th>Contact No</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsTableBody">
+                        <!-- Student records will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </article>
+
+    <!-- JS Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

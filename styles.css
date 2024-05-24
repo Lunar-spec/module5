@@ -1,0 +1,242 @@
+/* custom scroll bar */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #cccccc3a;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #407BFF;
+    border: 2px solid #cccccc3a;
+}
+
+*::-webkit-scrollbar-corner {
+    background-color: #cccccc3a;
+}
+
+/* Jost Font */
+* {
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    box-sizing: content-box;
+}
+
+header {
+    background-color: #407BFF;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.systemImg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+.registrationForm {
+    margin: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(90, 90, 90, 0.658);
+    backdrop-filter: blur(11.8px);
+    -webkit-backdrop-filter: blur(11.8px);
+    border: 1px solid rgba(255, 255, 255, 0.542);
+}
+
+.registrationForm h2 {
+    color: white;
+}
+
+#studentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.formSection {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    color: white;
+}
+
+input:focus {
+    outline: 0;
+}
+
+input {
+    width: 75%;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #eee;
+    padding: .5rem;
+    color: #fff;
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+    background-color: #407BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #568cff;
+}
+
+.uploadPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 4px;
+    cursor: pointer;
+}
+
+
+.studentRecords {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(90, 90, 90, 0.658);
+    backdrop-filter: blur(11.8px);
+    -webkit-backdrop-filter: blur(11.8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-weight: 500;
+}
+
+th {
+    background-color: #407BFF;
+    color: #fff;
+}
+
+/* Even row should be of different color */
+tr:nth-child(even) {
+    background-color: #568bffb8;
+}
+
+/* Styling for buttons within the table */
+.edit-btn,
+.save-btn,
+.delete-btn {
+    background-color: #4093ff;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background: #ff236c;
+    margin-top: 5px;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+    background-color: #40a3ff;
+}
+
+.delete-btn:hover {
+    background-color: #ff4583;
+}
+
+.studentRecords img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Styling for input fields within the table */
+table input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 6px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Styling for the table container */
+#recordsContainer {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 720px) {
+    .content {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
