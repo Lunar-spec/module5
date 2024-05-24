@@ -2,6 +2,18 @@
 
 This is a simple web application for managing student registration records. It allows users to register new students, edit existing records, and delete records.
 
+## Github Link
+
+```
+https://github.com/Lunar-spec/module5
+```
+
+# Hosted Link
+
+```
+https://lunar-spec.github.io/module5/
+```
+
 ## Features
 
 - **Register Students**: Users can add new students by providing their details such as a photo, name, student ID, email, and contact number.
